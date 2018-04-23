@@ -1,18 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/background_black"
+    >
 
-    <TextView
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="96dp"
+        android:padding="10dp"
+        android:src="@drawable/img_avatar"
+        app:civ_border_color="@color/colorTextGreen"
+        app:civ_border_width="1dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginEnd="30sp"
+        android:background="#a40404" />
+
+
+    <!-- @TODO how to set centered splitter -->
+    <TableLayout
+        android:id="@+id/tableview_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:id="@+id/tableRow_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:text="@string/textview_name"
+                android:textAlignment="textEnd"
+                android:paddingEnd="10dp"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_input_name"
+                android:text="@string/textview_input_name"
+                android:paddingStart="10dp"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow_surname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_surname"
+                android:text="@string/textView_surname"
+                android:textAlignment="textEnd"
+                android:paddingEnd="10dp"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_input_surname"
+                android:text="@string/textView_input_surname"
+                android:paddingStart="10dp"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow_dob"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_dob"
+                android:text="@string/textView_dob"
+                android:textAlignment="textEnd"
+                android:paddingEnd="10dp"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_input_dob"
+                android:text="@string/textView_input_dob"
+                android:paddingStart="10dp"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow_education"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_education"
+                android:text="@string/textView_education"
+                android:textAlignment="textEnd"
+                android:paddingEnd="10dp"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_input_education"
+                android:text="@string/textView_input_education"
+                android:paddingStart="10dp"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

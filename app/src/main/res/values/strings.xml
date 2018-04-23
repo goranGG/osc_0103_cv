@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CV</string>
+    <string name="textview_name">Name</string>
+    <string name="textview_input_name">John</string>
+    <string name="textView_surname">Surname</string>
+    <string name="textView_input_surname">Doe</string>
+    <string name="textView_dob">Date of birth</string>
+    <string name="textView_input_dob">Jan 1st 1988</string>
+    <string name="textView_education">Education</string>
+    <string name="textView_input_education">Selfstudy developer</string>
 </resources>
